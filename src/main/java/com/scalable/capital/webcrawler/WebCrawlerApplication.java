@@ -2,6 +2,8 @@ package com.scalable.capital.webcrawler;
 
 
 import java.util.List;
+import java.util.Map.Entry;
+
 import com.scalable.capital.webcrawler.business.*;
 import com.scalable.capital.webcrawler.business.analytics.*;
 import com.scalable.capital.webcrawler.console.*;
@@ -35,7 +37,7 @@ public class WebCrawlerApplication {
         console.printMessage("\tFound " + scripts.size() + " scripts");
 
         console.printMessage(WebCrawlerConstants.ANALYZING_SCRIPTS);
-        List topFiveList = analyzer.getTop(WebCrawlerConstants.TOP_JAVASCRIPT_LIBRARIES, scripts);
+        List<Entry<String,Long>> topFiveList = analyzer.getTop(WebCrawlerConstants.TOP_JAVASCRIPT_LIBRARIES, scripts);
 
         console.printMessage(WebCrawlerConstants.TOP_FIVE);
         console.printMessage(WebCrawlerConstants.SPACER);

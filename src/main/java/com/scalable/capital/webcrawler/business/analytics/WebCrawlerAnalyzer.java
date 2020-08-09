@@ -10,5 +10,5 @@ import static java.util.Map.Entry;
  * This determines the business metrics required.
  */
 public interface WebCrawlerAnalyzer {
-    List<Entry<String, Long>> getTop(long n, List<String> elements);
+   List<Entry<String, Long>> getTop(long n, List<String> elements);
 }

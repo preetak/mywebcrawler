@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.List;
+import java.util.Map.Entry;
+
 import com.scalable.capital.webcrawler.contstants.WebCrawlerConstants;
 
 
@@ -38,7 +40,7 @@ public class WebCrawlerConsoleImpl implements WebCrawlerConsole {
     }
 
     @Override
-    public void printMessages(List<String> messages) {
+    public void printMessages(List<Entry<String, Long>> messages) {
         if (messages != null && messages.size() > 0) {
             messages.stream()
                     .forEach(System.out::println);

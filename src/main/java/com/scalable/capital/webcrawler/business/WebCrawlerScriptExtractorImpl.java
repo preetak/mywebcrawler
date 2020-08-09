@@ -11,7 +11,7 @@ import java.util.Vector;
 public class WebCrawlerScriptExtractorImpl implements WebCrawlerScriptExtractor {
 
     @Override
-    public List<String> getScripts(final List<String> links) {
+    public List<String> getScripts(List<String> links) {
         final List<String> scripts = new Vector<>();
         final List<WebCrawlerScriptThread> threads = new ArrayList<>();
 
